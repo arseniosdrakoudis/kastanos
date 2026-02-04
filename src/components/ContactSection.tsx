@@ -239,9 +239,9 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground mb-1">{t.store.address}</p>
-                    <p className="text-muted-foreground">{businessInfo.address}</p>
+                    <p className="text-muted-foreground">{(businessInfo.locations.find(l => l.isPrimary) || businessInfo.locations[0]).address}</p>
                     <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessInfo.address)}`}
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((businessInfo.locations.find(l => l.isPrimary) || businessInfo.locations[0]).address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-champagne hover:text-champagne/80 transition-colors text-sm font-medium inline-block mt-1"
