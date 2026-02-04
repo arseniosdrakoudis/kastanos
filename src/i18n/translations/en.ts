@@ -20,12 +20,12 @@ export const en = {
 
   // Hero Section
   hero: {
-    badge: "40 Years • Kiti, Cyprus",
-    headlinePart1: "Exquisite Jewellery.",
-    headlinePart2: "Timeless Elegance.",
+    badge: "Since 1986 • Kiti, Cyprus",
+    headlinePart1: "Where Moments",
+    headlinePart2: "Become Forever.",
     subheadline:
-      "A curated selection of the world's finest jewellery, brought to you with expert craftsmanship and personalized service.",
-    exploreCollections: "Explore Collection",
+      "Every story deserves a symbol that lasts. Discover jewellery crafted to celebrate your most precious moments.",
+    exploreCollections: "Begin Your Story",
     visitBoutique: "Visit Our Boutiques",
     pauseVideo: "Pause background video",
     playVideo: "Play background video",

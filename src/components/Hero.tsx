@@ -105,70 +105,96 @@ export function Hero() {
       {/* Gradient Overlay */}
       <div className="hero-overlay" aria-hidden="true" />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center pt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Badge */}
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="inline-block text-sm tracking-[0.2em] uppercase text-champagne font-semibold mb-6 drop-shadow-lg bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-champagne/20"
-          >
-            {t.hero.badge}
-          </motion.span>
-
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium text-white mb-6 leading-tight drop-shadow-lg"
-          >
-            {t.hero.headlinePart1}
-            <br />
-            <span className="text-champagne">{t.hero.headlinePart2}</span>
-          </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-md"
-          >
-            {t.hero.subheadline}
-          </motion.p>
-
-          {/* CTAs */}
+      {/* Content - Left-aligned Editorial Layout */}
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 flex items-center min-h-screen">
+        <div className="flex items-stretch gap-8 md:gap-12 max-w-3xl">
+          {/* Vertical Accent Line */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button
-              size="lg"
-              asChild
-              className="bg-forest hover:bg-forest/90 text-white px-8 py-6 text-base magnetic-hover shadow-xl shadow-forest/20"
+            initial={{ scaleY: 0, opacity: 0 }}
+            animate={{ scaleY: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="hidden md:block w-px bg-gradient-to-b from-transparent via-champagne to-transparent origin-top"
+            style={{ minHeight: "320px" }}
+          />
+
+          {/* Text Content */}
+          <div className="flex flex-col justify-center text-left">
+            {/* Badge */}
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-xs md:text-sm tracking-[0.3em] uppercase text-champagne/90 font-medium mb-8"
             >
-              <Link href="#collections">{t.hero.exploreCollections}</Link>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              asChild
-              className="bg-transparent border-white/50 hover:border-champagne text-white hover:text-champagne hover:bg-white/10 px-8 py-6 text-base backdrop-blur-md shadow-lg"
+              {t.hero.badge}
+            </motion.span>
+
+            {/* Headline - Extra Large Editorial Style */}
+            <motion.h1
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-white mb-4 leading-[0.95] tracking-tight"
             >
-              <Link href="#contact">{t.hero.visitBoutique}</Link>
-            </Button>
-          </motion.div>
-        </motion.div>
+              {t.hero.headlinePart1}
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal text-champagne mb-10 leading-[0.95] tracking-tight italic"
+            >
+              {t.hero.headlinePart2}
+            </motion.h1>
+
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-base md:text-lg text-white/70 max-w-md mb-12 leading-relaxed font-light"
+            >
+              {t.hero.subheadline}
+            </motion.p>
+
+            {/* CTAs - Stacked on Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button
+                size="lg"
+                className="bg-champagne hover:bg-champagne/90 text-dark-bg px-10 py-6 text-sm font-medium tracking-wide uppercase magnetic-hover shadow-xl cursor-pointer"
+                onClick={() => {
+                  const collectionsSection = document.getElementById('collections');
+                  if (collectionsSection) {
+                    collectionsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                {t.hero.exploreCollections}
+              </Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                className="text-white/80 hover:text-champagne hover:bg-transparent px-6 py-6 text-sm font-medium tracking-wide uppercase group cursor-pointer"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                <span className="flex items-center gap-2">
+                  {t.hero.visitBoutique}
+                  <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </Button>
+            </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Scroll Indicator - positioned relative to section */}
