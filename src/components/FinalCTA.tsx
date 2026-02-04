@@ -44,7 +44,7 @@ export function FinalCTA() {
               className="border-foreground/20 hover:border-foreground/40 px-8"
             >
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessInfo.address)}`}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((businessInfo.locations.find(l => l.isPrimary) || businessInfo.locations[0]).address)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
