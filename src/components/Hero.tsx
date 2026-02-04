@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n";
 
 // AVIF clips configuration - add more clips here as they become available
-const HERO_CLIPS = ["/hero-clip-2.avif", "/hero-clip-1.avif", "/hero-clip-4.avif", "/hero-clip-3.avif"];
+const HERO_CLIPS = ["/hero-1.avif", "/hero-2.avif", "/hero-3.avif", "/hero-4.avif"];
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion();
@@ -64,7 +64,7 @@ export function Hero() {
   useEffect(() => {
     if (!showAnimatedClip || HERO_CLIPS.length <= 1) return;
 
-    const clipDuration = 6000; // 6 seconds per clip
+    const clipDuration = 7500; // 7.5 seconds per clip
     const timer = setInterval(() => {
       setCurrentClipIndex((prev) => (prev + 1) % HERO_CLIPS.length);
     }, clipDuration);
@@ -76,15 +76,23 @@ export function Hero() {
     <section className="hero relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* AVIF/Image Background */}
       {showAnimatedClip ? (
-        <img
-          src={HERO_CLIPS[currentClipIndex]}
-          alt=""
-          onLoad={handleClipLoad}
-          className="hero-avif"
-          aria-hidden="true"
-          fetchPriority="high"
-          decoding="async"
-        />
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={currentClipIndex}
+            src={HERO_CLIPS[currentClipIndex]}
+            alt=""
+            onLoad={handleClipLoad}
+            className="hero-avif"
+            style={HERO_CLIPS[currentClipIndex] === "/hero-1.avif" ? { transform: "scale(1.25)" } : undefined}
+            aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
       ) : (
         /* Static poster fallback for reduced motion / slow connections */
         <div
@@ -110,7 +118,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="inline-block text-sm tracking-[0.2em] uppercase text-gold font-semibold mb-6 drop-shadow-lg bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-gold/20"
+            className="inline-block text-sm tracking-[0.2em] uppercase text-champagne font-semibold mb-6 drop-shadow-lg bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-champagne/20"
           >
             {t.hero.badge}
           </motion.span>
@@ -124,7 +132,7 @@ export function Hero() {
           >
             {t.hero.headlinePart1}
             <br />
-            <span className="text-gold">{t.hero.headlinePart2}</span>
+            <span className="text-champagne">{t.hero.headlinePart2}</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -147,7 +155,7 @@ export function Hero() {
             <Button
               size="lg"
               asChild
-              className="bg-burgundy hover:bg-burgundy/90 text-white px-8 py-6 text-base magnetic-hover shadow-xl shadow-burgundy/20"
+              className="bg-forest hover:bg-forest/90 text-white px-8 py-6 text-base magnetic-hover shadow-xl shadow-forest/20"
             >
               <Link href="#collections">{t.hero.exploreCollections}</Link>
             </Button>
@@ -155,7 +163,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               asChild
-              className="bg-transparent border-white/50 hover:border-gold text-white hover:text-gold hover:bg-white/10 px-8 py-6 text-base backdrop-blur-md shadow-lg"
+              className="bg-transparent border-white/50 hover:border-champagne text-white hover:text-champagne hover:bg-white/10 px-8 py-6 text-base backdrop-blur-md shadow-lg"
             >
               <Link href="#contact">{t.hero.visitBoutique}</Link>
             </Button>

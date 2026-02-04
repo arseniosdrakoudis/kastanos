@@ -1,28 +1,29 @@
-export type Product = {
+export interface Product {
   id: string;
   name: string;
-  category: "Watch" | "Jewellery";
+  category: "Jewellery";
   sex: "Men" | "Women" | "Unisex";
-  productType: string;
+  productType: "Ring" | "Bracelet" | "Necklace" | "Earrings" | "Watch";
+  subCategory?: string;
   isBestSeller: boolean;
   price?: string;
   image: string;
   shortDescription: string;
-  description?: string;
-  details?: {
-    specifications?: { label: string; value: string }[];
-    materials?: string[];
-    features?: string[];
+  description: string;
+  details: {
+    specifications: { label: string; value: string }[];
+    materials: string[];
+    features: string[];
   };
-};
+}
 
-export type NavItem = {
+export interface NavItem {
   label: string;
   href: string;
-};
+}
 
-export type TrustPillar = {
+export interface TrustPillar {
   title: string;
   description: string;
   icon: string;
-};
+}

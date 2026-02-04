@@ -50,7 +50,7 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+          <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
             {t.contactPage.sectionLabel}
           </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mt-4 mb-6">
@@ -111,7 +111,7 @@ export function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder={t.contactPage.namePlaceholder}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:border-champagne transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
                     />
                   </div>
 
@@ -133,7 +133,7 @@ export function ContactSection() {
                         onChange={handleChange}
                         required
                         placeholder={t.contactPage.phonePlaceholder}
-                        className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
+                        className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:border-champagne transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
                       />
                     </div>
                   </div>
@@ -156,7 +156,7 @@ export function ContactSection() {
                         onChange={handleChange}
                         required
                         placeholder={t.contactPage.emailPlaceholder}
-                        className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
+                        className="w-full pl-12 pr-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:border-champagne transition-all duration-200 text-foreground placeholder:text-muted-foreground/60"
                       />
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export function ContactSection() {
                       onChange={handleChange}
                       required
                       placeholder={t.contactPage.messagePlaceholder}
-                      className="w-full flex-1 min-h-[150px] px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy transition-all duration-200 text-foreground placeholder:text-muted-foreground/60 resize-none"
+                      className="w-full flex-1 min-h-[150px] px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:border-champagne transition-all duration-200 text-foreground placeholder:text-muted-foreground/60 resize-none"
                     />
                   </div>
 
@@ -183,7 +183,7 @@ export function ContactSection() {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-burgundy hover:bg-burgundy/90 text-white magnetic-hover group"
+                    className="w-full bg-forest hover:bg-forest/90 text-white magnetic-hover group"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
@@ -218,14 +218,14 @@ export function ContactSection() {
               <div className="space-y-6">
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground mb-1">{t.store.phone}</p>
                     <a
                       href={businessInfo.phoneLink}
-                      className="text-burgundy hover:text-burgundy/80 transition-colors font-medium"
+                      className="text-champagne hover:text-champagne/80 transition-colors font-medium"
                     >
                       {businessInfo.phone}
                     </a>
@@ -234,7 +234,7 @@ export function ContactSection() {
 
                 {/* Address */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -244,7 +244,7 @@ export function ContactSection() {
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessInfo.address)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-burgundy hover:text-burgundy/80 transition-colors text-sm font-medium inline-block mt-1"
+                      className="text-champagne hover:text-champagne/80 transition-colors text-sm font-medium inline-block mt-1"
                     >
                       {t.common.getDirections} →
                     </a>
@@ -253,7 +253,7 @@ export function ContactSection() {
 
                 {/* Hours */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -267,7 +267,7 @@ export function ContactSection() {
             {/* Map Embed */}
             <div className="bg-card border border-border/50 rounded-2xl overflow-hidden shadow-lg shadow-black/5 flex-1 min-h-[250px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.5!2d33.0783345!3d34.6929155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e0ccacf29c0f51%3A0x70c694d36f1996b8!2sZacharias%20Watches%20%26%20Jewellery!5e0!3m2!1sen!2scy!4v1705856000000!5m2!1sen!2scy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.5!2d33.5818773!3d34.8538513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e09ba274acd8b1%3A0x53caefce40160635!2sKastanos%20Jewellery!5e0!3m2!1sen!2scy!4v1707069729000!5m2!1sen!2scy"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '250px' }}

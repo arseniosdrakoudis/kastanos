@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { CategorySpotlight } from "@/components/CategorySpotlight";
 import { FeaturedGrid } from "@/components/FeaturedGrid";
 import { TrustPillars } from "@/components/TrustPillars";
+import { ServicesSection } from "@/components/ServicesSection";
 import { StoreVisit } from "@/components/StoreVisit";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
         <CategorySpotlight />
         <FeaturedGrid />
         <TrustPillars />
+        <ServicesSection />
         <StoreVisit />
         <FinalCTA />
         <Footer />

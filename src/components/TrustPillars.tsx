@@ -48,7 +48,7 @@ export function TrustPillars() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+          <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
             {t.trust.sectionLabel}
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mt-4">
@@ -67,7 +67,7 @@ export function TrustPillars() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-burgundy/10 text-burgundy mb-6 icon-interactive cursor-default">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-champagne/10 text-champagne mb-6 icon-interactive cursor-default">
                 {iconMap[pillar.icon]}
               </div>
               <h3 className="font-medium text-foreground text-lg mb-3">

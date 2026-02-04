@@ -19,7 +19,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
-const STORAGE_KEY = "zacharias-locale";
+const STORAGE_KEY = "kastanos-locale";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");

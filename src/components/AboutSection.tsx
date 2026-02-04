@@ -73,7 +73,7 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+          <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
             {t.aboutPage.sectionLabel}
           </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mt-4 mb-6">
@@ -94,7 +94,7 @@ export function AboutSection() {
         >
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg shadow-black/5">
             <Image
-              src="/boutique.png"
+              src="/boutique.jpg"
               alt={t.aboutPage.storeImageAlt}
               fill
               className="object-cover"
@@ -102,7 +102,7 @@ export function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           </div>
           <div className="space-y-6">
-            <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+            <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
               {t.aboutPage.storyLabel}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground tracking-tight">
@@ -125,7 +125,7 @@ export function AboutSection() {
           className="bg-card border border-border/50 rounded-3xl p-8 md:p-12 mb-24 shadow-lg shadow-black/5"
         >
           <div className="text-center max-w-3xl mx-auto">
-            <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium mb-4 block">
+            <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium mb-4 block">
               {t.aboutPage.missionLabel}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6 tracking-tight">
@@ -146,7 +146,7 @@ export function AboutSection() {
           className="mb-24"
         >
           <div className="text-center mb-12">
-            <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium mb-4 block">
+            <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium mb-4 block">
               {t.aboutPage.valuesLabel}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground tracking-tight">
@@ -165,10 +165,10 @@ export function AboutSection() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-card border border-border/50 rounded-2xl p-6 shadow-lg shadow-black/5 hover:border-burgundy/30 transition-all duration-300"
+                className="group bg-card border border-border/50 rounded-2xl p-6 shadow-lg shadow-black/5 hover:border-champagne/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-burgundy/10 flex items-center justify-center mb-4 group-hover:bg-burgundy/20 transition-colors duration-300">
-                  <value.icon className="w-6 h-6 text-burgundy" />
+                <div className="w-12 h-12 rounded-xl bg-champagne/10 flex items-center justify-center mb-4 group-hover:bg-champagne/20 transition-colors duration-300">
+                  <value.icon className="w-6 h-6 text-champagne" />
                 </div>
                 <h3 className="text-xl font-medium text-foreground mb-2">
                   {value.title}
@@ -189,7 +189,7 @@ export function AboutSection() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium mb-4 block">
+          <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium mb-4 block">
             {t.aboutPage.teamLabel}
           </span>
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6 tracking-tight">
@@ -198,12 +198,12 @@ export function AboutSection() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             {t.aboutPage.teamDescription}
           </p>
-          <div className="inline-flex items-center gap-3 text-burgundy text-sm">
-            <span className="w-8 h-px bg-burgundy/50" />
+          <div className="inline-flex items-center gap-3 text-champagne text-sm">
+            <span className="w-8 h-px bg-champagne/50" />
             <span className="uppercase tracking-[0.15em]">
               {t.aboutPage.teamTagline}
             </span>
-            <span className="w-8 h-px bg-burgundy/50" />
+            <span className="w-8 h-px bg-champagne/50" />
           </div>
         </motion.div>
       </div>

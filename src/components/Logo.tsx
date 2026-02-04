@@ -9,14 +9,16 @@ interface LogoProps {
 }
 
 export function Logo({ width = 140, height = 50, className, variant = "normal" }: LogoProps) {
+  // reversed = white logo for dark backgrounds/hero
+  // normal = dark logo on light backgrounds
   const logoSrc = variant === "reversed" 
-    ? "/logo-horizontal-reversed.png" 
-    : "/logo-horizontal-normal.png";
+    ? "/kastanos-logo-reversed.png" 
+    : "/kastanos-logo-normal.png";
 
   return (
     <Image
       src={logoSrc}
-      alt="Zacharias - Watches & Jewellery"
+      alt="Kastanos Jewellery"
       width={width}
       height={height}
       className={cn("object-contain", className)}

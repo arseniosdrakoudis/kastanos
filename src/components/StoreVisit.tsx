@@ -23,7 +23,7 @@ export function StoreVisit() {
             className="relative aspect-[4/3] lg:aspect-[4/3] rounded-lg overflow-hidden"
           >
             <Image
-              src="/boutique.png"
+              src="/boutique.jpg"
               alt={t.store.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -38,7 +38,7 @@ export function StoreVisit() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+            <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
               {t.store.sectionLabel}
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mt-4 mb-6">
@@ -50,25 +50,33 @@ export function StoreVisit() {
 
             {/* Contact Details */}
             <div className="space-y-4 mb-8">
+              {/* Boutique Locations */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground mb-1">{t.store.address}</p>
-                  <p className="text-muted-foreground text-sm">{businessInfo.address}</p>
+                  <p className="font-medium text-foreground mb-2">{t.store.addresses}</p>
+                  <div className="space-y-3">
+                    {businessInfo.locations.map((location) => (
+                      <div key={location.name}>
+                        <p className="text-champagne text-sm font-medium">{location.name}</p>
+                        <p className="text-muted-foreground text-sm">{location.address}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="font-medium text-foreground mb-1">{t.store.phone}</p>
                   <a
                     href={businessInfo.phoneLink}
-                    className="text-burgundy hover:text-burgundy/80 transition-colors text-sm font-medium"
+                    className="text-champagne hover:text-champagne/80 transition-colors text-sm font-medium"
                   >
                     {businessInfo.phone}
                   </a>
@@ -76,7 +84,7 @@ export function StoreVisit() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-burgundy/10 flex items-center justify-center text-burgundy flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-champagne/10 flex items-center justify-center text-champagne flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
@@ -91,7 +99,7 @@ export function StoreVisit() {
               <Button
                 size="lg"
                 asChild
-                className="bg-burgundy hover:bg-burgundy/90 text-white magnetic-hover"
+                className="bg-forest hover:bg-forest/90 text-white magnetic-hover"
               >
                 <a href={businessInfo.phoneLink} className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
@@ -105,7 +113,7 @@ export function StoreVisit() {
                 className="border-foreground/20 hover:border-foreground/40"
               >
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessInfo.address)}`}
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessInfo.locations[0].address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

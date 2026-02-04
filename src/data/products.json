@@ -1,417 +1,276 @@
 [
   {
     "id": "1",
-    "name": "Patek Philippe Nautilus",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
+    "name": "Yellow Gold Oval Halo Ring",
+    "category": "Jewellery",
+    "sex": "Women",
+    "productType": "Ring",
+    "subCategory": "Engagement",
     "isBestSeller": true,
-    "price": "€45,000",
-    "image": "/products/patek-nautilus.png",
-    "shortDescription": "Iconic luxury sports watch with distinctive porthole design.",
-    "description": "Iconic luxury sports watch with distinctive porthole design. The Nautilus is celebrated for its elegant yet sporty character, combining exceptional mechanical craftsmanship with everyday wearability. A masterpiece that transcends trends and generations.",
+    "image": "/products/yellow-gold-halo-ring.jpg",
+    "shortDescription": "Simplicity that captivates. A yellow gold ring for elegant and timeless appearances.",
+    "description": "Simplicity that captivates. This stunning oval halo ring features a brilliant center stone surrounded by a delicate halo of sparkling diamonds, all set in warm yellow gold. The pavé-set diamond band adds extra brilliance, making this piece perfect for engagements or special occasions. A timeless design that radiates elegance.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "5711/1A-010" },
-        { "label": "Movement", "value": "Caliber 26-330 S C" },
-        { "label": "Case Size", "value": "40mm" },
-        { "label": "Water Resistance", "value": "120 meters" },
-        { "label": "Power Reserve", "value": "45 hours" },
-        { "label": "Crystal", "value": "Sapphire" }
+        { "label": "Style", "value": "Oval Halo" },
+        { "label": "Center Stone", "value": "Oval Cut" },
+        { "label": "Setting", "value": "Pavé Band" }
       ],
-      "materials": ["Stainless Steel Case", "Stainless Steel Bracelet", "Blue-Black Gradient Dial"],
-      "features": ["Self-winding Movement", "Date Display", "Luminescent Hands", "Fold-over Clasp"]
+      "materials": ["18K Yellow Gold", "Diamonds", "Polished Finish"],
+      "features": ["Halo Setting", "Pavé Diamond Band", "Timeless Design", "Handcrafted in Cyprus"]
     }
   },
   {
     "id": "2",
-    "name": "Cartier Love Bracelet",
+    "name": "Gold Beaded Eternity Ring",
     "category": "Jewellery",
-    "sex": "Unisex",
-    "productType": "Bracelet",
-    "isBestSeller": true,
-    "price": "€6,900",
-    "image": "/products/cartier-love.png",
-    "shortDescription": "Timeless symbol of enduring love in 18k gold.",
-    "description": "Timeless symbol of enduring love in 18k gold. Since its creation in 1969, the Love bracelet has become one of the most iconic pieces of jewelry in the world. Its unique fastening system requires a special screwdriver, symbolizing the commitment between two people.",
+    "sex": "Women",
+    "productType": "Ring",
+    "subCategory": "Eternity",
+    "isBestSeller": false,
+    "image": "/products/gold-beaded-ring.jpg",
+    "shortDescription": "A modern eternity ring available in 18K and 9K gold.",
+    "description": "A beautifully crafted beaded eternity ring featuring a continuous row of polished gold beads that wrap around the finger. This minimalist yet striking design offers a contemporary take on the classic eternity band. Available in both 18K and 9K gold, this versatile piece can be worn alone or stacked with other rings for a personalized look.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Love" },
-        { "label": "Width", "value": "6.1mm" },
-        { "label": "Available Sizes", "value": "16-21" },
-        { "label": "Motif", "value": "Screw Motif" }
+        { "label": "Style", "value": "Beaded Eternity" },
+        { "label": "Available", "value": "18K & 9K Gold" },
+        { "label": "Design", "value": "Full Eternity" }
       ],
-      "materials": ["18K Yellow Gold", "Polished Finish"],
-      "features": ["Iconic Screw Motifs", "Special Screwdriver Included", "Timeless Design", "Unisex Style"]
+      "materials": ["18K Yellow Gold", "9K Yellow Gold Option", "Polished Finish"],
+      "features": ["Stackable Design", "Comfortable Fit", "Minimalist Style", "Handcrafted in Cyprus"]
     }
   },
   {
     "id": "3",
-    "name": "Rolex Submariner",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
+    "name": "White Gold Halo Stud Earrings",
+    "category": "Jewellery",
+    "sex": "Women",
+    "productType": "Earrings",
+    "subCategory": "Studs",
     "isBestSeller": true,
-    "price": "€12,500",
-    "image": "/products/rolex-submariner.png",
-    "shortDescription": "The quintessential diver's watch, refined since 1953.",
-    "description": "The quintessential diver's watch, refined since 1953. The Submariner set the standard for diving watches and has become an icon of adventure and achievement. Its robust construction and timeless design make it equally at home underwater or at a formal dinner.",
+    "image": "/products/white-gold-halo-earrings.jpg",
+    "shortDescription": "Handmade earrings ideal for every age and occasion.",
+    "description": "Exquisite handmade halo stud earrings featuring radiant-cut center stones surrounded by brilliant diamond halos, all set in lustrous white gold. These versatile earrings are designed to be easy to wear and suitable for any occasion, from everyday elegance to special celebrations. A must-have accessory that will elevate every look. Stand out because you deserve it.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "126610LN" },
-        { "label": "Movement", "value": "Caliber 3235" },
-        { "label": "Case Size", "value": "41mm" },
-        { "label": "Water Resistance", "value": "300 meters" },
-        { "label": "Power Reserve", "value": "70 hours" },
-        { "label": "Bezel", "value": "Unidirectional Ceramic" }
+        { "label": "Style", "value": "Halo Studs" },
+        { "label": "Stone Cut", "value": "Radiant Cut" },
+        { "label": "Setting", "value": "Prong with Halo" }
       ],
-      "materials": ["Oystersteel Case", "Oystersteel Bracelet", "Black Cerachrom Bezel"],
-      "features": ["Chronometer Certified", "Date with Cyclops Lens", "Oysterlock Clasp", "Glidelock Extension"]
+      "materials": ["18K White Gold", "Diamonds", "Secure Butterfly Backs"],
+      "features": ["Handmade", "Made in Cyprus", "Versatile Design", "Suitable for All Ages"]
     }
   },
   {
     "id": "4",
-    "name": "Bvlgari Serpenti Tubogas",
-    "category": "Watch",
+    "name": "Diamond Milgrain Eternity Band",
+    "category": "Jewellery",
     "sex": "Women",
-    "productType": "Quartz",
-    "isBestSeller": true,
-    "price": "€18,200",
-    "image": "/products/bvlgari-serpenti.jpg",
-    "shortDescription": "Serpentine elegance with iconic coiled design in 18k gold.",
-    "description": "Serpentine elegance with iconic coiled design in 18k gold. The Serpenti collection draws inspiration from the snake, an ancient symbol of wisdom, vitality, and seduction. This timepiece wraps around the wrist in a fluid embrace of precious gold.",
+    "productType": "Ring",
+    "subCategory": "Eternity",
+    "isBestSeller": false,
+    "image": "/products/diamond-eternity-band.jpg",
+    "shortDescription": "A delicate eternity ring with diamonds in 18K and 9K gold.",
+    "description": "A stunning eternity band featuring alternating marquise and round diamond settings with intricate milgrain detailing. This delicate ring showcases exceptional craftsmanship with its vintage-inspired design. Available in both white and yellow gold, in 18K and 9K options, with your choice of zircons or natural diamonds. Perfect for stacking or wearing as a wedding band.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Serpenti Tubogas" },
-        { "label": "Movement", "value": "Quartz" },
-        { "label": "Case Size", "value": "35mm" },
-        { "label": "Water Resistance", "value": "30 meters" },
-        { "label": "Dial", "value": "Black Lacquered" }
+        { "label": "Style", "value": "Milgrain Eternity" },
+        { "label": "Available", "value": "18K & 9K Gold" },
+        { "label": "Stones", "value": "Diamonds or Zircons" }
       ],
-      "materials": ["18K Rose Gold Case", "18K Rose Gold Tubogas Bracelet", "Diamond Bezel"],
-      "features": ["Iconic Serpent Head Design", "Flexible Tubogas Bracelet", "Diamond Setting", "Italian Craftsmanship"]
+      "materials": ["18K White Gold", "18K Yellow Gold Option", "Diamonds", "Milgrain Detail"],
+      "features": ["Vintage-Inspired", "Stackable", "Handcrafted in Cyprus", "Multiple Gold Options"]
     }
   },
   {
     "id": "5",
-    "name": "Omega Speedmaster",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
+    "name": "Handcrafted White Gold Cross",
+    "category": "Jewellery",
+    "sex": "Unisex",
+    "productType": "Necklace",
+    "subCategory": "Crosses",
     "isBestSeller": true,
-    "price": "€7,800",
-    "image": "/products/omega-speedmaster.png",
-    "shortDescription": "The first watch worn on the moon.",
-    "description": "The first watch worn on the moon. Since NASA's selection for all manned space missions in 1965, the Speedmaster has been part of humanity's greatest adventures. This legendary chronograph combines space-tested reliability with timeless design.",
+    "image": "/products/white-gold-cross.jpg",
+    "shortDescription": "A unique handmade white gold cross pendant, designed and crafted in Cyprus.",
+    "description": "A truly unique piece – this handmade white gold cross pendant is our own design and production, and has become one of our most beloved bestsellers. Crafted with care and attention to detail, this elegant cross accompanies you through life's most beautiful moments. Worn on a delicate chain, it makes a meaningful gift for christenings, confirmations, or any special occasion. Always worthy – may your little prince live long and prosper.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "310.30.42.50.01.001" },
-        { "label": "Movement", "value": "Co-Axial Master Chronometer 3861" },
-        { "label": "Case Size", "value": "42mm" },
-        { "label": "Water Resistance", "value": "50 meters" },
-        { "label": "Power Reserve", "value": "50 hours" },
-        { "label": "Crystal", "value": "Hesalite" }
+        { "label": "Style", "value": "Classic Cross" },
+        { "label": "Design", "value": "Kastanos Original" },
+        { "label": "Chain", "value": "Included" }
       ],
-      "materials": ["Stainless Steel Case", "Stainless Steel Bracelet", "Black Step Dial"],
-      "features": ["Chronograph Function", "Tachymeter Scale", "METAS Certified", "NASA Flight Qualified"]
+      "materials": ["18K White Gold", "Polished Finish", "Delicate Chain"],
+      "features": ["Handmade", "Kastanos Original Design", "Made in Cyprus", "Bestseller", "Perfect for Christenings"]
     }
   },
   {
     "id": "6",
-    "name": "Tiffany & Co. Diamond Ring",
+    "name": "Gold Filigree Drop Earrings",
     "category": "Jewellery",
     "sex": "Women",
-    "productType": "Ring",
-    "isBestSeller": true,
-    "price": "€15,000",
-    "image": "/products/tiffany-ring.png",
-    "shortDescription": "Exceptional brilliance, exceptional craftsmanship.",
-    "description": "Exceptional brilliance, exceptional craftsmanship. This stunning diamond ring showcases Tiffany's legendary expertise in selecting and setting the world's finest diamonds. Each stone is hand-selected for its exceptional quality and brilliance.",
+    "productType": "Earrings",
+    "subCategory": "Drops",
+    "isBestSeller": false,
+    "image": "/products/gold-filigree-earrings.jpg",
+    "shortDescription": "Elegant filigree drop earrings with ruby center stones.",
+    "description": "Exquisite yellow gold drop earrings featuring intricate filigree work in a beautiful floral design. Each earring is adorned with a vivid ruby-red center stone that adds a striking pop of color. The delicate openwork pattern showcases traditional goldsmithing techniques, creating a piece that is both timeless and eye-catching. Secured with lever-back clasps for comfortable all-day wear.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Tiffany Setting" },
-        { "label": "Center Stone", "value": "1.0 Carat Round Brilliant" },
-        { "label": "Cut Grade", "value": "Excellent" },
-        { "label": "Color", "value": "F" },
-        { "label": "Clarity", "value": "VS1" }
+        { "label": "Style", "value": "Filigree Drops" },
+        { "label": "Stone", "value": "Ruby" },
+        { "label": "Closure", "value": "Lever Back" }
       ],
-      "materials": ["Platinum Band", "Natural Diamond", "Six-Prong Setting"],
-      "features": ["GIA Certified Diamond", "Signature Tiffany Setting", "Lifetime Service", "Blue Box Presentation"]
+      "materials": ["Yellow Gold", "Ruby Center Stones", "Filigree Openwork"],
+      "features": ["Intricate Filigree Design", "Secure Lever Backs", "Traditional Craftsmanship", "Statement Piece"]
     }
   },
   {
     "id": "7",
-    "name": "Audemars Piguet Royal Oak",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
+    "name": "Gold Crucifix Cross Pendant",
+    "category": "Jewellery",
+    "sex": "Unisex",
+    "productType": "Necklace",
+    "subCategory": "Crosses",
     "isBestSeller": false,
-    "price": "€38,500",
-    "image": "/products/ap-royal-oak.png",
-    "shortDescription": "The original luxury sports watch with octagonal bezel.",
-    "description": "The original luxury sports watch with octagonal bezel. Designed by Gérald Genta in 1972, the Royal Oak revolutionized the watch industry. Its distinctive octagonal bezel with exposed screws and integrated bracelet created an entirely new category of haute horlogerie.",
+    "image": "/products/gold-crucifix-cross.jpg",
+    "shortDescription": "A unique handmade gold crucifix, designed and crafted in Cyprus.",
+    "description": "A truly unique piece – this handmade gold crucifix pendant is of our own production and design, and has become one of our most beloved pieces with the highest sales. We thank you so much for being with us and choosing jewellery that accompanies you through life's most beautiful moments. This meaningful crucifix makes a perfect gift for christenings, confirmations, or any special religious occasion. Always worthy – may your little prince live long and prosper.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "15500ST.OO.1220ST.01" },
-        { "label": "Movement", "value": "Caliber 4302" },
-        { "label": "Case Size", "value": "41mm" },
-        { "label": "Water Resistance", "value": "50 meters" },
-        { "label": "Power Reserve", "value": "70 hours" },
-        { "label": "Crystal", "value": "Sapphire" }
+        { "label": "Style", "value": "Crucifix" },
+        { "label": "Design", "value": "Kastanos Original" },
+        { "label": "Chain", "value": "Included" }
       ],
-      "materials": ["Stainless Steel Case", "Integrated Steel Bracelet", "Blue Tapisserie Dial"],
-      "features": ["Octagonal Bezel", "Integrated Bracelet", "Date Display", "See-through Caseback"]
+      "materials": ["Yellow Gold", "Polished Finish", "Gold Chain"],
+      "features": ["Handmade", "Kastanos Original Design", "Made in Cyprus", "Bestseller", "Perfect for Christenings"]
     }
   },
   {
     "id": "8",
-    "name": "Van Cleef & Arpels Alhambra Necklace",
+    "name": "18K Diamond Tennis Bracelet",
     "category": "Jewellery",
     "sex": "Women",
-    "productType": "Necklace",
+    "productType": "Bracelet",
+    "subCategory": "Tennis",
     "isBestSeller": false,
-    "price": "€4,200",
-    "image": "/products/vca-alhambra.png",
-    "shortDescription": "Iconic four-leaf clover motif in mother of pearl.",
-    "description": "Iconic four-leaf clover motif in mother of pearl. The Alhambra collection, created in 1968, has become a symbol of luck, health, fortune, and love. Each piece features the signature beaded contour and luminous mother of pearl center.",
+    "image": "/products/diamond-tennis-bracelet.jpg",
+    "shortDescription": "Classic tennis bracelet in 18K white gold with brilliant diamonds.",
+    "description": "The ultimate symbol of timeless elegance – this stunning 18K white gold tennis bracelet features a continuous line of brilliant round diamonds, each hand-set in a classic four-prong setting. The flexible design wraps beautifully around the wrist, creating an uninterrupted flow of sparkle. Secured with a secure clasp and safety lock, this bracelet is a luxurious investment piece that will be treasured for generations.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Vintage Alhambra" },
-        { "label": "Chain Length", "value": "42cm" },
-        { "label": "Motif Size", "value": "15mm" },
-        { "label": "Clasp", "value": "Lobster Claw" }
+        { "label": "Style", "value": "Tennis Bracelet" },
+        { "label": "Gold", "value": "18K White Gold" },
+        { "label": "Setting", "value": "Four-Prong" }
       ],
-      "materials": ["18K Yellow Gold", "Mother of Pearl", "Beaded Contour"],
-      "features": ["Iconic Four-Leaf Motif", "Adjustable Chain", "Signature Hallmark", "Maison Craftsmanship"]
+      "materials": ["18K White Gold", "Natural Diamonds", "Secure Box Clasp"],
+      "features": ["Brilliant Round Diamonds", "Flexible Design", "Safety Clasp", "Timeless Classic"]
     }
   },
   {
     "id": "9",
-    "name": "Cartier Tank Française",
-    "category": "Watch",
+    "name": "Diamond Tennis Necklace",
+    "category": "Jewellery",
     "sex": "Women",
-    "productType": "Quartz",
+    "productType": "Necklace",
+    "subCategory": "Tennis",
     "isBestSeller": false,
-    "price": "€8,900",
-    "image": "/products/cartier-tank.png",
-    "shortDescription": "Art Deco elegance meets modern sophistication.",
-    "description": "Art Deco elegance meets modern sophistication. The Tank Française, launched in 1996, features a more robust design with curved case and integrated bracelet, while maintaining the geometric elegance that has defined the Tank collection since 1917.",
+    "image": "/products/diamond-tennis-necklace.jpg",
+    "shortDescription": "An elegant diamond tennis necklace for effortless sophistication.",
+    "description": "Pure elegance redefined – this diamond tennis necklace features a delicate strand of brilliant diamonds set in a continuous line around the neck. The timeless design sits beautifully at the collarbone, creating a stunning display of sparkle that catches the light with every movement. Whether worn alone for understated luxury or layered with other pieces, this necklace is the epitome of refined sophistication.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "WSTA0065" },
-        { "label": "Movement", "value": "Quartz" },
-        { "label": "Case Size", "value": "25.7 x 21.2mm" },
-        { "label": "Water Resistance", "value": "30 meters" },
-        { "label": "Dial", "value": "Silvered" }
+        { "label": "Style", "value": "Tennis Necklace" },
+        { "label": "Length", "value": "Choker Style" },
+        { "label": "Setting", "value": "Continuous Line" }
       ],
-      "materials": ["Stainless Steel Case", "Integrated Steel Bracelet", "Blue Sword-Shaped Hands"],
-      "features": ["Roman Numerals", "Octagonal Crown with Sapphire", "Secret Signature at 7 O'Clock", "Art Deco Design"]
+      "materials": ["White Gold", "Brilliant Diamonds", "Secure Clasp"],
+      "features": ["Delicate Design", "Brilliant Sparkle", "Versatile Styling", "Everyday Luxury"]
     }
   },
   {
     "id": "10",
-    "name": "Chopard Happy Diamonds Earrings",
+    "name": "Virgin Mary Gold Pendant",
     "category": "Jewellery",
     "sex": "Women",
-    "productType": "Earrings",
+    "productType": "Necklace",
+    "subCategory": "Religious",
     "isBestSeller": false,
-    "price": "€5,800",
-    "image": "/products/chopard-earrings.png",
-    "shortDescription": "Dancing diamonds in an elegant round setting.",
-    "description": "Dancing diamonds in an elegant round setting. The Happy Diamonds collection features freely moving diamonds between two sapphire crystals, creating a playful dance of light with every movement. A celebration of joy and feminine elegance.",
+    "image": "/products/virgin-mary-pendant.jpg",
+    "shortDescription": "New Virgin Mary pendant available in 18K and 9K gold.",
+    "description": "A beautiful new addition to our religious collection – this exquisite Virgin Mary pendant features a delicate profile of the Madonna set within a circular frame adorned with sparkling zircons. Crafted in warm yellow gold and available in both 18K and 9K options, this meaningful piece makes a perfect gift for christenings, first communions, or any special occasion. Worn on a matching gold chain, it sits elegantly at the neckline.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Happy Diamonds" },
-        { "label": "Diameter", "value": "10mm" },
-        { "label": "Diamonds", "value": "6 Floating" },
-        { "label": "Carat Weight", "value": "0.30ct Total" }
+        { "label": "Style", "value": "Madonna Pendant" },
+        { "label": "Available", "value": "18K & 9K Gold" },
+        { "label": "Stones", "value": "Zircons" }
       ],
-      "materials": ["18K White Gold", "Floating Diamonds", "Sapphire Crystal"],
-      "features": ["Dancing Diamonds", "Secure Butterfly Backs", "Swiss Craftsmanship", "Ethical Gold"]
+      "materials": ["18K Yellow Gold", "9K Yellow Gold Option", "Zircons", "Gold Chain"],
+      "features": ["Religious Motif", "Zircon Halo", "Multiple Gold Options", "Perfect Gift"]
     }
   },
   {
     "id": "11",
-    "name": "IWC Portugieser Chronograph",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
+    "name": "Two-Tone Ladies Watch",
+    "category": "Jewellery",
+    "sex": "Women",
+    "productType": "Bracelet",
+    "subCategory": "Watches",
     "isBestSeller": false,
-    "price": "€9,450",
-    "image": "/products/iwc-portugieser.png",
-    "shortDescription": "Classic chronograph with nautical heritage.",
-    "description": "Classic chronograph with nautical heritage. The Portugieser, born in 1939, was created for Portuguese merchants who demanded marine chronometer precision in a wristwatch. Its clean dial and refined proportions have made it a dress watch icon.",
+    "image": "/products/two-tone-ladies-watch.jpg",
+    "shortDescription": "Elegant two-tone ladies watch with blue dial and faceted bracelet.",
+    "description": "A sophisticated ladies watch that combines elegance with modern design. The striking blue dial features gold-tone hands and indices, while the faceted two-tone stainless steel and gold bracelet catches the light beautifully. With day-date function and a comfortable fit, this timepiece is perfect for the woman who appreciates both style and functionality.",
     "details": {
       "specifications": [
-        { "label": "Reference", "value": "IW371605" },
-        { "label": "Movement", "value": "Caliber 69355" },
-        { "label": "Case Size", "value": "41mm" },
-        { "label": "Water Resistance", "value": "30 meters" },
-        { "label": "Power Reserve", "value": "46 hours" },
-        { "label": "Crystal", "value": "Sapphire, Domed" }
+        { "label": "Style", "value": "Two-Tone" },
+        { "label": "Dial", "value": "Blue" },
+        { "label": "Functions", "value": "Day-Date" }
       ],
-      "materials": ["Stainless Steel Case", "Black Alligator Leather Strap", "Silver-Plated Dial"],
-      "features": ["Chronograph Function", "Small Seconds", "See-through Caseback", "Applied Hour Markers"]
+      "materials": ["Stainless Steel", "Gold-Tone Accents", "Faceted Bracelet"],
+      "features": ["Blue Dial", "Day-Date Display", "Faceted Links", "Elegant Design"]
     }
   },
   {
     "id": "12",
-    "name": "David Yurman Cable Bracelet",
+    "name": "Crystal Bracelet Watch",
     "category": "Jewellery",
     "sex": "Women",
     "productType": "Bracelet",
+    "subCategory": "Watches",
     "isBestSeller": false,
-    "price": "€1,850",
-    "image": "/products/david-yurman-cable.png",
-    "shortDescription": "Signature twisted cable design in sterling silver.",
-    "description": "Signature twisted cable design in sterling silver. The Cable collection, David Yurman's most iconic design, features the distinctive helix pattern inspired by twisted rope. This timeless bracelet can be worn alone or stacked for a personalized look.",
+    "image": "/products/crystal-bracelet-watch.jpg",
+    "shortDescription": "Stunning quartz watch with crystal-encrusted bracelet and mother of pearl dial.",
+    "description": "Pure glamour on your wrist – this dazzling ladies watch features a mother of pearl dial with elegant Roman numeral indices, surrounded by a bezel of sparkling crystals. The fully crystal-encrusted bracelet makes a bold statement, while the quartz movement ensures reliable timekeeping. Perfect for special occasions or adding sparkle to everyday looks.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Cable Classics" },
-        { "label": "Width", "value": "5mm" },
-        { "label": "Diameter", "value": "Medium" },
-        { "label": "Closure", "value": "Hook Clasp" }
+        { "label": "Movement", "value": "Quartz" },
+        { "label": "Dial", "value": "Mother of Pearl" },
+        { "label": "Indices", "value": "Roman Numerals" }
       ],
-      "materials": ["Sterling Silver", "14K Yellow Gold Accents", "Polished Finish"],
-      "features": ["Signature Cable Design", "Stackable", "Comfortable Fit", "American Craftsmanship"]
+      "materials": ["Silver-Tone Metal", "Crystals", "Mother of Pearl Dial"],
+      "features": ["Full Crystal Bracelet", "Roman Numerals", "Quartz Movement", "Statement Piece"]
     }
   },
   {
     "id": "13",
-    "name": "Tudor Black Bay",
-    "category": "Watch",
-    "sex": "Unisex",
-    "productType": "Automatic",
-    "isBestSeller": false,
-    "price": "€4,100",
-    "image": "/products/tudor-black-bay.png",
-    "shortDescription": "Heritage-inspired diver with modern reliability.",
-    "description": "Heritage-inspired diver with modern reliability. The Black Bay pays tribute to Tudor's diving heritage while incorporating cutting-edge technology. Its vintage-inspired design and robust construction offer exceptional value in the luxury dive watch segment.",
-    "details": {
-      "specifications": [
-        { "label": "Reference", "value": "M79230N-0009" },
-        { "label": "Movement", "value": "Caliber MT5602" },
-        { "label": "Case Size", "value": "41mm" },
-        { "label": "Water Resistance", "value": "200 meters" },
-        { "label": "Power Reserve", "value": "70 hours" },
-        { "label": "Bezel", "value": "Unidirectional Aluminum" }
-      ],
-      "materials": ["Stainless Steel Case", "Fabric Strap with Steel Buckle", "Black Dial"],
-      "features": ["Snowflake Hands", "Luminescent Indices", "COSC Certified", "Vintage-Inspired Design"]
-    }
-  },
-  {
-    "id": "14",
-    "name": "Mikimoto Pearl Strand",
-    "category": "Jewellery",
-    "sex": "Women",
-    "productType": "Necklace",
-    "isBestSeller": false,
-    "price": "€8,500",
-    "image": "/products/mikimoto-pearls.png",
-    "shortDescription": "Perfectly matched Akoya cultured pearls.",
-    "description": "Perfectly matched Akoya cultured pearls. Mikimoto, the creator of the cultured pearl, continues to set the standard for pearl quality. Each strand is meticulously matched for size, shape, color, and luster to create a harmonious graduated appearance.",
-    "details": {
-      "specifications": [
-        { "label": "Collection", "value": "Essential" },
-        { "label": "Pearl Size", "value": "7.0-7.5mm" },
-        { "label": "Length", "value": "18 inches" },
-        { "label": "Clasp", "value": "18K White Gold" }
-      ],
-      "materials": ["Akoya Cultured Pearls", "18K White Gold Clasp", "Silk Thread"],
-      "features": ["AAA Grade Pearls", "Graduated Sizing", "Hand-Knotted", "Certificate of Authenticity"]
-    }
-  },
-  {
-    "id": "15",
-    "name": "TAG Heuer Monaco",
-    "category": "Watch",
-    "sex": "Men",
-    "productType": "Automatic",
-    "isBestSeller": false,
-    "price": "€6,950",
-    "image": "/products/tag-monaco.png",
-    "shortDescription": "The iconic square chronograph made famous by Steve McQueen.",
-    "description": "The iconic square chronograph made famous by Steve McQueen. Introduced in 1969, the Monaco was the world's first automatic chronograph and the first water-resistant square watch. Its bold design and racing heritage continue to captivate collectors.",
-    "details": {
-      "specifications": [
-        { "label": "Reference", "value": "CBL2111.BA0644" },
-        { "label": "Movement", "value": "Caliber Heuer 02" },
-        { "label": "Case Size", "value": "39mm" },
-        { "label": "Water Resistance", "value": "100 meters" },
-        { "label": "Power Reserve", "value": "80 hours" },
-        { "label": "Crystal", "value": "Sapphire" }
-      ],
-      "materials": ["Stainless Steel Case", "Steel Bracelet", "Blue Dial"],
-      "features": ["Square Case", "Chronograph", "Date Display", "Racing Heritage"]
-    }
-  },
-  {
-    "id": "16",
-    "name": "Buccellati Macri Classica Bracelet",
-    "category": "Jewellery",
-    "sex": "Women",
-    "productType": "Bracelet",
-    "isBestSeller": false,
-    "price": "€12,800",
-    "image": "/products/buccellati-macri.png",
-    "shortDescription": "Intricate honeycomb texture with diamond accents.",
-    "description": "Intricate honeycomb texture with diamond accents. The Macri Classica collection showcases Buccellati's legendary goldsmithing techniques, featuring the signature rigato engraving that creates a distinctive shimmering honeycomb pattern.",
-    "details": {
-      "specifications": [
-        { "label": "Collection", "value": "Macri Classica" },
-        { "label": "Width", "value": "12mm" },
-        { "label": "Diamonds", "value": "18" },
-        { "label": "Carat Weight", "value": "0.35ct" }
-      ],
-      "materials": ["18K Yellow Gold", "18K White Gold Trim", "Brilliant Cut Diamonds"],
-      "features": ["Rigato Engraving", "Hinged Design", "Italian Artisanship", "Secret Clasp"]
-    }
-  },
-  {
-    "id": "17",
-    "name": "Jaeger-LeCoultre Reverso",
-    "category": "Watch",
-    "sex": "Unisex",
-    "productType": "Manual",
-    "isBestSeller": false,
-    "price": "€11,200",
-    "image": "/products/jlc-reverso.png",
-    "shortDescription": "The legendary reversible case for polo players.",
-    "description": "The legendary reversible case for polo players. Created in 1931 for British officers in India, the Reverso's swiveling case was designed to protect the crystal during polo matches. Today, it stands as an Art Deco masterpiece and a symbol of refined elegance.",
-    "details": {
-      "specifications": [
-        { "label": "Reference", "value": "Q2438520" },
-        { "label": "Movement", "value": "Caliber 822/2" },
-        { "label": "Case Size", "value": "42.9 x 25.5mm" },
-        { "label": "Water Resistance", "value": "30 meters" },
-        { "label": "Power Reserve", "value": "45 hours" },
-        { "label": "Winding", "value": "Manual" }
-      ],
-      "materials": ["Stainless Steel Case", "Black Alligator Strap", "Silver Dial"],
-      "features": ["Reversible Case", "Engravable Caseback", "Art Deco Design", "Small Seconds"]
-    }
-  },
-  {
-    "id": "18",
-    "name": "Pomellato Nudo Ring",
+    "name": "Blue Sapphire Halo Ring",
     "category": "Jewellery",
     "sex": "Women",
     "productType": "Ring",
+    "subCategory": "Statement",
     "isBestSeller": false,
-    "price": "€3,200",
-    "image": "/products/pomellato-nudo.png",
-    "shortDescription": "Geometric gemstone in a contemporary nude setting.",
-    "description": "Geometric gemstone in a contemporary nude setting. The Nudo collection features a distinctive setting that reveals the gemstone's natural beauty from all angles. Its modern design and vibrant colors have made it a contemporary jewelry icon.",
+    "image": "/products/sapphire-halo-ring.jpg",
+    "shortDescription": "Handmade white gold ring with blue sapphire and zircon halo.",
+    "description": "A stunning handmade ring in 18K or 9K white gold, featuring a magnificent oval blue sapphire as its centerpiece. The deep blue stone is surrounded by a sparkling halo of zircons and set on a pavé-set band for extra brilliance. A timeless piece with exceptional craftsmanship quality that will surely impress. Available in both white and yellow gold options.",
     "details": {
       "specifications": [
-        { "label": "Collection", "value": "Nudo Petit" },
-        { "label": "Stone", "value": "Blue Topaz" },
-        { "label": "Stone Size", "value": "10mm" },
-        { "label": "Ring Width", "value": "8mm" }
+        { "label": "Style", "value": "Sapphire Halo" },
+        { "label": "Center Stone", "value": "Blue Sapphire" },
+        { "label": "Available", "value": "18K & 9K Gold" }
       ],
-      "materials": ["18K Rose Gold", "Blue Topaz", "Polished Finish"],
-      "features": ["Naked Setting", "Faceted Stone", "Stackable Design", "Italian Design"]
+      "materials": ["18K White Gold", "Blue Sapphire", "Zircons", "Pavé Setting"],
+      "features": ["Handmade", "Oval Cut Sapphire", "Zircon Halo", "Multiple Gold Options"]
     }
   }
 ]
+

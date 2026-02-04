@@ -55,7 +55,7 @@ export function LanguageSwitcher({
               className={cn(
                 "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                 locale === l
-                  ? "bg-burgundy text-white"
+                  ? "bg-champagne text-white"
                   : "bg-muted hover:bg-muted/80 text-foreground"
               )}
             >
@@ -109,7 +109,7 @@ export function LanguageSwitcher({
                 className={cn(
                   "flex items-center gap-3 w-full px-4 py-2.5 text-sm transition-colors duration-150",
                   locale === l
-                    ? "bg-burgundy/10 text-burgundy font-medium"
+                    ? "bg-champagne/10 text-champagne font-medium"
                     : "text-foreground hover:bg-muted"
                 )}
                 role="option"

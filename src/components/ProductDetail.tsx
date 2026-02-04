@@ -19,10 +19,7 @@ export function ProductDetail({ productId }: ProductDetailProps) {
   const product = products.find((p) => p.id === productId);
 
   // Get translated category label
-  const getCategoryLabel = (category: string) => {
-    if (category.toLowerCase() === "watch") {
-      return t.productCategories.watch;
-    }
+  const getCategoryLabel = () => {
     return t.productCategories.jewellery;
   };
 
@@ -41,7 +38,7 @@ export function ProductDetail({ productId }: ProductDetailProps) {
             <p className="text-muted-foreground mb-8">
               {t.productPage.productNotFoundDescription}
             </p>
-            <Link href="/#watches">
+            <Link href="/jewellery">
               <Button variant="outline" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 {t.productPage.backToCollection}
@@ -64,7 +61,7 @@ export function ProductDetail({ productId }: ProductDetailProps) {
           className="mb-8"
         >
           <Link
-            href="/#watches"
+            href="/jewellery"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -101,9 +98,9 @@ export function ProductDetail({ productId }: ProductDetailProps) {
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge
                 variant="secondary"
-                className="bg-burgundy/10 text-burgundy border-0 text-sm"
+                className="bg-champagne/10 text-champagne border-0 text-sm"
               >
-                {getCategoryLabel(product.category)}
+                {getCategoryLabel()}
               </Badge>
               <Badge
                 variant="outline"
@@ -140,7 +137,7 @@ export function ProductDetail({ productId }: ProductDetailProps) {
               <Button
                 asChild
                 size="lg"
-                className="bg-burgundy hover:bg-burgundy/90 text-white gap-2"
+                className="bg-forest hover:bg-forest/90 text-white gap-2"
               >
                 <Link href="/contact">
                   <Phone className="w-4 h-4" />
@@ -203,7 +200,7 @@ export function ProductDetail({ productId }: ProductDetailProps) {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {product.details.features.map((feature, index) => (
                         <li key={index} className="flex items-center gap-2 text-foreground">
-                          <span className="w-1.5 h-1.5 rounded-full bg-burgundy" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-champagne" />
                           {feature}
                         </li>
                       ))}

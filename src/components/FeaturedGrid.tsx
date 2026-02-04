@@ -28,7 +28,7 @@ function ProductCard({ product, index, translations }: ProductCardProps) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link href={`/product/${product.id}`} className="block">
-        <Card className="group overflow-hidden border-border/50 hover:border-burgundy/30 transition-all duration-300 bg-card card-hover-lift">
+        <Card className="group overflow-hidden border-border/50 hover:border-champagne/30 transition-all duration-300 bg-card card-hover-lift">
           {/* Image Container */}
           <div className="relative aspect-square overflow-hidden bg-white">
             {/* Product Image */}
@@ -53,7 +53,7 @@ function ProductCard({ product, index, translations }: ProductCardProps) {
           <CardContent className="p-4">
             <Badge
               variant="secondary"
-              className="mb-2 text-xs font-normal bg-burgundy/10 text-burgundy border-0"
+              className="mb-2 text-xs font-normal bg-champagne/10 text-champagne border-0"
             >
               {translations.categoryLabel}
             </Badge>
@@ -74,15 +74,12 @@ export function FeaturedGrid() {
   const { t } = useLanguage();
 
   // Get translated category label
-  const getCategoryLabel = (category: string) => {
-    if (category.toLowerCase() === "watch") {
-      return t.productCategories.watch;
-    }
+  const getCategoryLabel = () => {
     return t.productCategories.jewellery;
   };
 
   return (
-    <section id="watches" className="py-24 md:py-32 bg-muted/30">
+    <section id="featured" className="py-24 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
         <motion.div
@@ -92,7 +89,7 @@ export function FeaturedGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+          <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
             {t.featured.sectionLabel}
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mt-4">
@@ -112,7 +109,7 @@ export function FeaturedGrid() {
               index={index}
               translations={{
                 viewProduct: t.featured.viewDetails,
-                categoryLabel: getCategoryLabel(product.category),
+                categoryLabel: getCategoryLabel(),
               }}
             />
           ))}

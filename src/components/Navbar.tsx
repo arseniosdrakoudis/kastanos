@@ -33,8 +33,10 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
   }, [forceScrolled]);
 
   const navItems = [
-    { label: t.nav.watches, href: "/watches" },
-    { label: t.nav.jewellery, href: "/jewellery" },
+    { label: t.nav.rings, href: "/jewellery/rings" },
+    { label: t.nav.necklaces, href: "/jewellery/necklaces" },
+    { label: t.nav.earrings, href: "/jewellery/earrings" },
+    { label: t.nav.braceletswatches, href: "/jewellery/bracelets" },
     { label: t.nav.about, href: "/about" },
     { label: t.nav.contact, href: "/contact" },
   ];
@@ -51,7 +53,7 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
       <nav className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="relative z-10">
-          <Logo width={220} height={80} variant={isScrolled ? "normal" : "reversed"} />
+          <Logo width={160} height={50} variant={isScrolled ? "normal" : "reversed"} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -91,7 +93,7 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
           <Button
             size="sm"
             asChild
-            className="bg-burgundy hover:bg-burgundy/90 text-white magnetic-hover"
+            className="bg-forest hover:bg-forest/90 text-white magnetic-hover"
           >
             <a href={businessInfo.phoneLink} className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
@@ -112,8 +114,8 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col h-full">
               {/* Header with logo */}
-              <div className="px-6 pt-6 pb-4 border-b border-border/30 bg-gradient-to-r from-burgundy/5 to-transparent">
-                <Logo width={180} height={65} />
+              <div className="px-6 pt-6 pb-4 border-b border-border/30 bg-gradient-to-r from-champagne/5 to-transparent">
+                <Logo width={140} height={45} />
               </div>
               
               {/* Navigation Links */}
@@ -124,7 +126,7 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="block py-3 text-lg font-medium text-foreground/80 hover:text-burgundy transition-colors duration-200 border-b border-border/20 hover:border-burgundy/30"
+                        className="block py-3 text-lg font-medium text-foreground/80 hover:text-champagne transition-colors duration-200 border-b border-border/20 hover:border-champagne/30"
                       >
                         {item.label}
                       </Link>
@@ -146,7 +148,7 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
                     variant="outline" 
                     size="lg" 
                     asChild 
-                    className="w-full border-foreground/20 hover:border-burgundy/50 hover:bg-burgundy/5"
+                    className="w-full border-foreground/20 hover:border-champagne/50 hover:bg-champagne/5"
                   >
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
                       {t.common.bookVisit}
@@ -155,7 +157,7 @@ export function Navbar({ forceScrolled = false }: NavbarProps) {
                   <Button
                     size="lg"
                     asChild
-                    className="w-full bg-burgundy hover:bg-burgundy/90 text-white shadow-lg shadow-burgundy/20"
+                    className="w-full bg-forest hover:bg-forest/90 text-white shadow-lg shadow-forest/20"
                   >
                     <a href={businessInfo.phoneLink} className="flex items-center justify-center gap-2">
                       <Phone className="w-4 h-4" />

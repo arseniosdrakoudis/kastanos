@@ -7,7 +7,7 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-0.5 bg-burgundy origin-left z-[100]"
+      className="fixed top-0 left-0 right-0 h-0.5 bg-champagne origin-left z-[100]"
       style={{ scaleX: scrollYProgress }}
       aria-hidden="true"
     />

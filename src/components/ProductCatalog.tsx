@@ -14,15 +14,17 @@ import { useLanguage } from "@/i18n";
 
 interface ProductCatalogProps {
   products: Product[];
-  category: "Watch" | "Jewellery";
   sexOptions: string[];
-  typeOptions: string[];
+  subCategoryOptions: string[];
+  materialOptions: string[];
+  initialProductType?: string;
 }
 
 interface FilterState {
   search: string;
   sex: string[];
-  productType: string[];
+  subCategory: string[];
+  material: string[];
 }
 
 function ProductCard({
@@ -42,7 +44,7 @@ function ProductCard({
       transition={{ duration: 0.4, delay: index * 0.05 }}
     >
       <Link href={`/product/${product.id}`} className="block">
-        <Card className="group overflow-hidden border-border/50 hover:border-burgundy/30 transition-all duration-300 bg-card card-hover-lift">
+        <Card className="group overflow-hidden border-border/50 hover:border-champagne/30 transition-all duration-300 bg-card card-hover-lift">
           <div className="relative aspect-square overflow-hidden bg-white">
             <Image
               src={product.image}
@@ -55,7 +57,7 @@ function ProductCard({
           <CardContent className="p-4">
             <Badge
               variant="secondary"
-              className="mb-2 text-xs font-normal bg-burgundy/10 text-burgundy border-0"
+              className="mb-2 text-xs font-normal bg-champagne/10 text-champagne border-0"
             >
               {translations.categoryLabel}
             </Badge>
@@ -86,8 +88,8 @@ function FilterButton({
       onClick={onClick}
       className={`px-3 py-1.5 text-sm rounded-full border transition-all duration-200 ${
         isActive
-          ? "bg-burgundy text-white border-burgundy"
-          : "bg-background border-border hover:border-burgundy/50 text-foreground"
+          ? "bg-champagne text-white border-champagne"
+          : "bg-background border-border hover:border-champagne/50 text-foreground"
       }`}
     >
       {label}
@@ -99,19 +101,23 @@ function FilterSection({
   filters,
   setFilters,
   sexOptions,
-  typeOptions,
+  subCategoryOptions,
+  materialOptions,
   translations,
 }: {
   filters: FilterState;
   setFilters: (filters: FilterState) => void;
   sexOptions: string[];
-  typeOptions: string[];
+  subCategoryOptions: string[];
+  materialOptions: string[];
   translations: {
     sexLabel: string;
-    typeLabel: string;
+    categoryLabel: string;
+    materialLabel: string;
     clearFilters: string;
     sexOptions: Record<string, string>;
-    typeOptions: Record<string, string>;
+    subCategoryOptions: Record<string, string>;
+    materialOptions: Record<string, string>;
   };
 }) {
   const toggleSex = (sex: string) => {
@@ -121,14 +127,21 @@ function FilterSection({
     setFilters({ ...filters, sex: newSex });
   };
 
-  const toggleType = (type: string) => {
-    const newType = filters.productType.includes(type)
-      ? filters.productType.filter((t) => t !== type)
-      : [...filters.productType, type];
-    setFilters({ ...filters, productType: newType });
+  const toggleSubCategory = (subCat: string) => {
+    const newSubCat = filters.subCategory.includes(subCat)
+      ? filters.subCategory.filter((s) => s !== subCat)
+      : [...filters.subCategory, subCat];
+    setFilters({ ...filters, subCategory: newSubCat });
   };
 
-  const hasActiveFilters = filters.sex.length > 0 || filters.productType.length > 0;
+  const toggleMaterial = (mat: string) => {
+    const newMat = filters.material.includes(mat)
+      ? filters.material.filter((m) => m !== mat)
+      : [...filters.material, mat];
+    setFilters({ ...filters, material: newMat });
+  };
+
+  const hasActiveFilters = filters.sex.length > 0 || filters.subCategory.length > 0 || filters.material.length > 0;
 
   return (
     <div className="space-y-6">
@@ -149,18 +162,35 @@ function FilterSection({
         </div>
       </div>
 
-      {/* Type Filter */}
+      {/* SubCategory Filter */}
       <div>
         <h4 className="text-sm font-medium text-foreground mb-3">
-          {translations.typeLabel}
+          {translations.categoryLabel}
         </h4>
         <div className="flex flex-wrap gap-2">
-          {typeOptions.map((type) => (
+          {subCategoryOptions.map((subCat) => (
             <FilterButton
-              key={type}
-              label={translations.typeOptions[type] || type}
-              isActive={filters.productType.includes(type)}
-              onClick={() => toggleType(type)}
+              key={subCat}
+              label={translations.subCategoryOptions[subCat] || subCat}
+              isActive={filters.subCategory.includes(subCat)}
+              onClick={() => toggleSubCategory(subCat)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Material Filter */}
+      <div>
+        <h4 className="text-sm font-medium text-foreground mb-3">
+          {translations.materialLabel}
+        </h4>
+        <div className="flex flex-wrap gap-2">
+          {materialOptions.map((mat) => (
+            <FilterButton
+              key={mat}
+              label={translations.materialOptions[mat] || mat}
+              isActive={filters.material.includes(mat)}
+              onClick={() => toggleMaterial(mat)}
             />
           ))}
         </div>
@@ -169,8 +199,8 @@ function FilterSection({
       {/* Clear Filters */}
       {hasActiveFilters && (
         <button
-          onClick={() => setFilters({ ...filters, sex: [], productType: [] })}
-          className="text-sm text-burgundy hover:text-burgundy/80 flex items-center gap-1"
+          onClick={() => setFilters({ ...filters, sex: [], subCategory: [], material: [] })}
+          className="text-sm text-champagne hover:text-champagne/80 flex items-center gap-1"
         >
           <X className="w-3 h-3" />
           {translations.clearFilters}
@@ -182,20 +212,30 @@ function FilterSection({
 
 export function ProductCatalogContent({
   products,
-  category,
   sexOptions,
-  typeOptions,
+  subCategoryOptions,
+  materialOptions,
+  initialProductType,
 }: ProductCatalogProps) {
-  const [filters, setFilters] = useState<FilterState>({
-    search: "",
-    sex: [],
-    productType: [],
+  const [filters, setFilters] = useState<FilterState>(() => {
+    // Pre-filter products based on initialProductType if provided
+    return {
+      search: "",
+      sex: [],
+      subCategory: [],
+      material: [],
+    };
   });
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const { t } = useLanguage();
 
+  // Filter products - first by initialProductType (from URL), then by user filters
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
+      // First, filter by initialProductType (from category page navigation)
+      if (initialProductType && product.productType !== initialProductType) {
+        return false;
+      }
       // Search filter
       if (
         filters.search &&
@@ -207,36 +247,84 @@ export function ProductCatalogContent({
       if (filters.sex.length > 0 && !filters.sex.includes(product.sex)) {
         return false;
       }
-      // Product type filter
+      // SubCategory filter
       if (
-        filters.productType.length > 0 &&
-        !filters.productType.includes(product.productType)
+        filters.subCategory.length > 0 &&
+        (!product.subCategory || !filters.subCategory.includes(product.subCategory))
+      ) {
+        return false;
+      }
+      // Material filter - check if any selected material is in the product's materials array
+      if (
+        filters.material.length > 0 &&
+        !filters.material.some((mat) => product.details.materials.includes(mat))
       ) {
         return false;
       }
       return true;
     });
-  }, [products, filters]);
+  }, [products, filters, initialProductType]);
 
-  const getCategoryLabel = (cat: string) => {
-    if (cat.toLowerCase() === "watch") {
-      return t.productCategories.watch;
+  // Calculate the total products in the current category (for displaying "X of Y category")
+  const categoryTotal = useMemo(() => {
+    if (initialProductType) {
+      return products.filter(p => p.productType === initialProductType).length;
     }
+    return products.length;
+  }, [products, initialProductType]);
+
+  // Get the category label for display
+  const getProductTypeName = () => {
+    if (!initialProductType) return t.catalogPage.products;
+    const typeMap: Record<string, string> = {
+      Ring: t.nav.rings,
+      Necklace: t.nav.necklaces,
+      Earrings: t.nav.earrings,
+      Bracelet: t.nav.braceletswatches,
+    };
+    return typeMap[initialProductType] || t.catalogPage.products;
+  };
+
+  const getCategoryLabel = () => {
     return t.productCategories.jewellery;
   };
 
-  const activeFilterCount = filters.sex.length + filters.productType.length;
+  const activeFilterCount = filters.sex.length + filters.subCategory.length + filters.material.length;
 
   const filterTranslations = {
     sexLabel: t.catalogPage.sexLabel,
-    typeLabel: t.catalogPage.typeLabel,
+    categoryLabel: t.catalogPage.categoryLabel,
+    materialLabel: t.catalogPage.materialLabel,
     clearFilters: t.catalogPage.clearFilters,
     sexOptions: t.catalogPage.sexOptions,
-    typeOptions: t.catalogPage.typeOptions,
+    subCategoryOptions: t.catalogPage.subCategoryOptions,
+    materialOptions: t.catalogPage.materialOptions,
+  };
+  // Get category-specific title and description
+  const getPageTitle = () => {
+    if (!initialProductType) return t.catalogPage.jewelleryTitle;
+    const titleMap: Record<string, string> = {
+      Ring: t.catalogPage.categoryTitles?.rings || t.nav.rings,
+      Necklace: t.catalogPage.categoryTitles?.necklaces || t.nav.necklaces,
+      Earrings: t.catalogPage.categoryTitles?.earrings || t.nav.earrings,
+      Bracelet: t.catalogPage.categoryTitles?.bracelets || t.nav.braceletswatches,
+    };
+    return titleMap[initialProductType] || t.catalogPage.jewelleryTitle;
   };
 
-  const pageTitle = category === "Watch" ? t.catalogPage.watchesTitle : t.catalogPage.jewelleryTitle;
-  const pageDescription = category === "Watch" ? t.catalogPage.watchesDescription : t.catalogPage.jewelleryDescription;
+  const getPageDescription = () => {
+    if (!initialProductType) return t.catalogPage.jewelleryDescription;
+    const descMap: Record<string, string> = {
+      Ring: t.catalogPage.categoryDescriptions?.rings || t.catalogPage.jewelleryDescription,
+      Necklace: t.catalogPage.categoryDescriptions?.necklaces || t.catalogPage.jewelleryDescription,
+      Earrings: t.catalogPage.categoryDescriptions?.earrings || t.catalogPage.jewelleryDescription,
+      Bracelet: t.catalogPage.categoryDescriptions?.bracelets || t.catalogPage.jewelleryDescription,
+    };
+    return descMap[initialProductType] || t.catalogPage.jewelleryDescription;
+  };
+
+  const pageTitle = getPageTitle();
+  const pageDescription = getPageDescription();
 
   return (
     <>
@@ -249,7 +337,7 @@ export function ProductCatalogContent({
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <span className="text-sm tracking-[0.2em] uppercase text-burgundy font-medium">
+            <span className="text-sm tracking-[0.2em] uppercase text-champagne font-medium">
               {t.catalogPage.sectionLabel}
             </span>
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mt-4">
@@ -277,7 +365,7 @@ export function ProductCatalogContent({
                   placeholder={t.catalogPage.searchPlaceholder}
                   value={filters.search}
                   onChange={(e) => setFilters({ ...filters, search: e.target.value })}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-burgundy/50 focus:border-burgundy transition-all"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:border-champagne transition-all"
                 />
               </div>
 
@@ -287,7 +375,7 @@ export function ProductCatalogContent({
                   <Button variant="outline" size="lg" className="gap-2 shrink-0">
                     <SlidersHorizontal className="w-4 h-4" />
                     {activeFilterCount > 0 && (
-                      <Badge className="bg-burgundy text-white text-xs px-1.5 py-0.5">
+                      <Badge className="bg-champagne text-white text-xs px-1.5 py-0.5">
                         {activeFilterCount}
                       </Badge>
                     )}
@@ -301,7 +389,8 @@ export function ProductCatalogContent({
                     filters={filters}
                     setFilters={setFilters}
                     sexOptions={sexOptions}
-                    typeOptions={typeOptions}
+                    subCategoryOptions={subCategoryOptions}
+                    materialOptions={materialOptions}
                     translations={filterTranslations}
                   />
                 </SheetContent>
@@ -335,22 +424,47 @@ export function ProductCatalogContent({
               {/* Divider */}
               <div className="h-6 w-px bg-border" />
 
-              {/* Type Filter */}
+              {/* SubCategory Filter */}
               <div className="flex items-center gap-3">
                 <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
-                  {t.catalogPage.typeLabel}:
+                  {t.catalogPage.categoryLabel}:
                 </span>
                 <div className="flex flex-wrap gap-2">
-                  {typeOptions.map((type) => (
+                  {subCategoryOptions.map((subCat) => (
                     <FilterButton
-                      key={type}
-                      label={filterTranslations.typeOptions[type as keyof typeof filterTranslations.typeOptions] || type}
-                      isActive={filters.productType.includes(type)}
+                      key={subCat}
+                      label={filterTranslations.subCategoryOptions[subCat as keyof typeof filterTranslations.subCategoryOptions] || subCat}
+                      isActive={filters.subCategory.includes(subCat)}
                       onClick={() => {
-                        const newType = filters.productType.includes(type)
-                          ? filters.productType.filter((t) => t !== type)
-                          : [...filters.productType, type];
-                        setFilters({ ...filters, productType: newType });
+                        const newSubCat = filters.subCategory.includes(subCat)
+                          ? filters.subCategory.filter((s) => s !== subCat)
+                          : [...filters.subCategory, subCat];
+                        setFilters({ ...filters, subCategory: newSubCat });
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="h-6 w-px bg-border" />
+
+              {/* Material Filter */}
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  {t.catalogPage.materialLabel}:
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {materialOptions.map((mat) => (
+                    <FilterButton
+                      key={mat}
+                      label={filterTranslations.materialOptions[mat as keyof typeof filterTranslations.materialOptions] || mat}
+                      isActive={filters.material.includes(mat)}
+                      onClick={() => {
+                        const newMat = filters.material.includes(mat)
+                          ? filters.material.filter((m) => m !== mat)
+                          : [...filters.material, mat];
+                        setFilters({ ...filters, material: newMat });
                       }}
                     />
                   ))}
@@ -362,8 +476,8 @@ export function ProductCatalogContent({
                 <>
                   <div className="h-6 w-px bg-border" />
                   <button
-                    onClick={() => setFilters({ search: "", sex: [], productType: [] })}
-                    className="text-sm text-burgundy hover:text-burgundy/80 flex items-center gap-1 font-medium"
+                    onClick={() => setFilters({ search: "", sex: [], subCategory: [], material: [] })}
+                    className="text-sm text-champagne hover:text-champagne/80 flex items-center gap-1 font-medium"
                   >
                     <X className="w-3 h-3" />
                     {t.catalogPage.clearFilters}
@@ -377,7 +491,8 @@ export function ProductCatalogContent({
           <p className="text-sm text-muted-foreground mb-6">
             {t.catalogPage.showingResults
               .replace("{count}", filteredProducts.length.toString())
-              .replace("{total}", products.length.toString())}
+              .replace("{total}", categoryTotal.toString())
+              .replace("{category}", getProductTypeName())}
           </p>
 
           {/* Product Grid */}
@@ -389,7 +504,7 @@ export function ProductCatalogContent({
                   product={product}
                   index={index}
                   translations={{
-                    categoryLabel: getCategoryLabel(product.category),
+                    categoryLabel: getCategoryLabel(),
                   }}
                 />
               ))}
@@ -400,8 +515,8 @@ export function ProductCatalogContent({
                 {t.catalogPage.noResults}
               </p>
               <button
-                onClick={() => setFilters({ search: "", sex: [], productType: [] })}
-                className="mt-4 text-burgundy hover:text-burgundy/80 font-medium"
+                onClick={() => setFilters({ search: "", sex: [], subCategory: [], material: [] })}
+                className="mt-4 text-champagne hover:text-champagne/80 font-medium"
               >
                 {t.catalogPage.clearFilters}
               </button>

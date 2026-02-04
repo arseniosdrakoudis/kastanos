@@ -16,27 +16,33 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Zacharias | Watches & Jewellery - Limassol, Cyprus",
+  title: "Kastanos Jewellery | Fine Jewellery & Custom Design - Kiti, Cyprus",
   description:
-    "Discover exceptional timepieces and exquisite jewellery at Zacharias. Your trusted boutique for luxury watches and fine jewellery in Limassol, Cyprus since 1985.",
+    "Family-owned jewellery boutique with 40 years of excellence. In-house manufacturing, custom design, repairs & restoration. Visit Kastanos Jewellery in Kiti, Larnaca.",
   keywords: [
-    "luxury watches",
     "fine jewellery",
-    "Limassol",
+    "custom jewellery design",
+    "jewellery repairs",
+    "wedding rings",
+    "engagement rings",
+    "baptism crosses",
+    "gold jewellery",
+    "silver jewellery",
+    "diamond jewellery",
+    "Kiti",
+    "Larnaca",
     "Cyprus",
-    "Patek Philippe",
-    "Rolex",
-    "Cartier",
-    "boutique",
+    "family jewellers",
   ],
   openGraph: {
-    title: "Zacharias | Watches & Jewellery",
+    title: "Kastanos Jewellery | Fine Jewellery & Custom Design",
     description:
-      "Exceptional timepieces and exquisite jewellery. Visit our boutique in Limassol, Cyprus.",
+      "Family-owned jewellery boutique with 40 years of craftsmanship. In-house manufacturing, custom design, and expert repairs in Kiti, Cyprus.",
     type: "website",
     locale: "en_CY",
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -49,7 +55,7 @@ export default function RootLayout({
         {/* Preload hero AVIF clip for optimal LCP */}
         <link
           rel="preload"
-          href="/hero-clip-1.avif"
+          href="/hero-1.avif"
           as="image"
           type="image/avif"
           fetchPriority="high"

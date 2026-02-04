@@ -1,7 +1,8 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { use } from "react";
 import { Suspense } from "react";
+import { notFound } from "next/navigation";
 import { LanguageProvider } from "@/i18n";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -11,31 +12,37 @@ import { ProductCatalogContent } from "@/components/ProductCatalog";
 import productsData from "@/data/products.json";
 import { Product } from "@/types";
 
-function JewelleryContent() {
-  const searchParams = useSearchParams();
+// Map URL slugs to product types
+const categoryMap: Record<string, string> = {
+  rings: "Ring",
+  necklaces: "Necklace",
+  earrings: "Earrings",
+  bracelets: "Bracelet",
+};
+
+// Valid categories for validation
+const validCategories = Object.keys(categoryMap);
+
+function CategoryContent({ category }: { category: string }) {
   const products = productsData as Product[];
+  const productType = categoryMap[category];
 
   // Get unique sex options
   const sexOptions = [...new Set(products.map((p) => p.sex))];
-  
-  // Get initial product type from URL query parameter
-  const initialType = searchParams.get("type");
-  
-  // Filter products by type first if initialType is set
-  const relevantProducts = initialType 
-    ? products.filter(p => p.productType === initialType)
-    : products;
-  
+
+  // Filter products by the category type
+  const relevantProducts = products.filter(p => p.productType === productType);
+
   // Get unique subcategory options from relevant products
   const subCategoryOptions = [...new Set(
     relevantProducts
       .map((p) => p.subCategory)
       .filter((sub): sub is string => !!sub)
   )];
-  
+
   // Get unique material options from relevant products (extract primary materials)
   const primaryMaterials = ["18K Yellow Gold", "18K White Gold", "9K Yellow Gold", "Yellow Gold", "White Gold", "Diamonds", "Zircons", "Stainless Steel"];
-  const materialOptions = primaryMaterials.filter(mat => 
+  const materialOptions = primaryMaterials.filter(mat =>
     relevantProducts.some(p => p.details.materials.includes(mat))
   );
 
@@ -48,7 +55,7 @@ function JewelleryContent() {
         sexOptions={sexOptions}
         subCategoryOptions={subCategoryOptions}
         materialOptions={materialOptions}
-        initialProductType={initialType || undefined}
+        initialProductType={productType}
       />
       <Footer />
       <BackToTop />
@@ -56,12 +63,19 @@ function JewelleryContent() {
   );
 }
 
-export default function JewelleryPage() {
+export default function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = use(params);
+  
+  // Validate the category
+  if (!validCategories.includes(category.toLowerCase())) {
+    notFound();
+  }
+
   return (
     <LanguageProvider>
       <main>
         <Suspense fallback={<div className="min-h-screen bg-background" />}>
-          <JewelleryContent />
+          <CategoryContent category={category.toLowerCase()} />
         </Suspense>
       </main>
     </LanguageProvider>

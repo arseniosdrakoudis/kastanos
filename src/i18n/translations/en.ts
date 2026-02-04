@@ -10,21 +10,23 @@ export const en = {
 
   // Navbar
   nav: {
-    watches: "Watches",
-    jewellery: "Jewellery",
+    rings: "Rings",
+    necklaces: "Necklaces",
+    earrings: "Earrings",
+    braceletswatches: "Bracelets & Watches",
     about: "About",
     contact: "Contact",
   },
 
   // Hero Section
   hero: {
-    badge: "Since 1985 • Limassol, Cyprus",
-    headlinePart1: "Timeless Watches.",
-    headlinePart2: "Exceptional Jewellery.",
+    badge: "40 Years • Kiti, Cyprus",
+    headlinePart1: "Exquisite Jewellery.",
+    headlinePart2: "Timeless Elegance.",
     subheadline:
-      "A curated selection of the world's finest timepieces and exquisite jewellery, brought to you with expert craftsmanship and personalized service.",
-    exploreCollections: "Explore Collections",
-    visitBoutique: "Visit Our Boutique",
+      "A curated selection of the world's finest jewellery, brought to you with expert craftsmanship and personalized service.",
+    exploreCollections: "Explore Collection",
+    visitBoutique: "Visit Our Boutiques",
     pauseVideo: "Pause background video",
     playVideo: "Play background video",
   },
@@ -33,14 +35,21 @@ export const en = {
   categories: {
     sectionLabel: "Our Collections",
     sectionTitle: "Discover Excellence",
-    watches: {
-      title: "Watches",
-      description:
-        "Precision timepieces from the world's most prestigious maisons",
+    rings: {
+      title: "Rings",
+      description: "Engagement rings, wedding bands, signet rings & gemstone statement pieces",
     },
-    jewellery: {
-      title: "Jewellery",
-      description: "Exquisite pieces that capture moments and memories",
+    necklaces: {
+      title: "Necklaces",
+      description: "Pendants, crosses, chains & gemstone necklaces for every occasion",
+    },
+    earrings: {
+      title: "Earrings",
+      description: "Studs, hoops, drop earrings & diamond-set designs",
+    },
+    braceletswatches: {
+      title: "Bracelets & Watches",
+      description: "Tennis bracelets, bangles, charm bracelets & elegant ladies' watches",
     },
   },
 
@@ -49,7 +58,7 @@ export const en = {
     sectionLabel: "Featured Selection",
     sectionTitle: "Best Sellers",
     sectionDescription:
-      "Discover our most sought-after timepieces and jewellery, each chosen for its exceptional quality and timeless appeal.",
+      "Discover our most sought-after jewellery pieces, each chosen for its exceptional quality and timeless appeal.",
     quickView: "Quick View",
     viewDetails: "View Details",
     inquire: "Inquire About This Piece",
@@ -60,7 +69,7 @@ export const en = {
   // Trust Pillars
   trust: {
     sectionLabel: "Why Choose Us",
-    sectionTitle: "The Zacharias Promise",
+    sectionTitle: "The Kastanos Promise",
     pillars: {
       authenticity: {
         title: "Authenticity & Quality",
@@ -86,19 +95,20 @@ export const en = {
   // Store Visit
   store: {
     sectionLabel: "Visit Us",
-    sectionTitle: "Our Boutique",
+    sectionTitle: "Our Boutiques",
     description:
-      "Experience our collection in person. Our expert team is ready to guide you through our curated selection of luxury timepieces and exquisite jewellery.",
+      "Experience our collection in person. Our expert team is ready to guide you through our curated selection of exquisite jewellery.",
     address: "Address",
+    addresses: "Our Locations",
     phone: "Phone",
     hours: "Hours",
-    hoursValue: "Mon–Sat: 10:00 – 19:00",
-    imageAlt: "Zacharias Watches & Jewellery Boutique in Limassol",
+    hoursValue: "Mon–Fri: 09:00 – 17:00",
+    imageAlt: "Kastanos Fine Jewellery Boutique in Kiti",
   },
 
   // Final CTA
   finalCta: {
-    title: "Visit Zacharias in Limassol",
+    title: "Visit Kastanos in Kiti",
     description:
       "Discover the perfect piece for your collection or a special occasion. Our experts are ready to assist you.",
   },
@@ -115,8 +125,39 @@ export const en = {
 
   // Products (category names)
   productCategories: {
-    watch: "Watch",
     jewellery: "Jewellery",
+  },
+
+  // Services
+  services: {
+    sectionLabel: "Our Services",
+    sectionTitle: "Expert Craftsmanship",
+    sectionDescription:
+      "From custom design to expert repairs, our in-house workshop delivers exceptional craftsmanship for all your jewellery needs.",
+    manufacturing: {
+      title: "In-House Manufacturing",
+      description: "Jewellery produced and finished in our own workshop",
+    },
+    customDesign: {
+      title: "Custom Design",
+      description: "Bespoke orders crafted to your vision",
+    },
+    repairs: {
+      title: "Repairs & Restoration",
+      description: "Expert jewellery repairs and restoration services",
+    },
+    resizing: {
+      title: "Ring Resizing",
+      description: "Professional ring resizing for the perfect fit",
+    },
+    stoneSetting: {
+      title: "Stone Setting",
+      description: "Precise stone setting and replacement",
+    },
+    redesign: {
+      title: "Jewellery Redesign",
+      description: "Transform existing pieces into new designs",
+    },
   },
 
   // Product Page
@@ -134,37 +175,65 @@ export const en = {
   // Catalog Page
   catalogPage: {
     sectionLabel: "Our Collection",
-    watchesTitle: "Luxury Watches",
-    watchesDescription: "Discover our curated selection of exceptional timepieces from the world's most prestigious maisons.",
     jewelleryTitle: "Fine Jewellery",
     jewelleryDescription: "Explore our exquisite collection of fine jewellery, crafted to celebrate life's most precious moments.",
     searchPlaceholder: "Search products...",
     filters: "Filters",
     sexLabel: "For",
-    typeLabel: "Type",
+    categoryLabel: "Category",
+    materialLabel: "Material",
     clearFilters: "Clear filters",
-    showingResults: "Showing {count} of {total} products",
+    showingResults: "Showing {count} of {total} {category}",
+    products: "products",
     noResults: "No products match your criteria.",
     sexOptions: {
       Men: "Men",
       Women: "Women",
       Unisex: "Unisex",
     },
-    typeOptions: {
-      Automatic: "Automatic",
-      Quartz: "Quartz",
-      Manual: "Manual",
-      Ring: "Ring",
-      Bracelet: "Bracelet",
-      Necklace: "Necklace",
-      Earrings: "Earrings",
+    subCategoryOptions: {
+      Engagement: "Engagement",
+      Eternity: "Eternity",
+      Statement: "Statement",
+      Studs: "Studs",
+      Drops: "Drops",
+      Hoops: "Hoops",
+      Crosses: "Crosses",
+      Religious: "Religious",
+      Tennis: "Tennis",
+      Chains: "Chains",
+      Pendants: "Pendants",
+      Ladies: "Ladies",
+      Watches: "Watches",
+    },
+    materialOptions: {
+      "18K Yellow Gold": "18K Yellow Gold",
+      "18K White Gold": "18K White Gold",
+      "9K Yellow Gold": "9K Yellow Gold",
+      "Yellow Gold": "Yellow Gold",
+      "White Gold": "White Gold",
+      "Diamonds": "Diamonds",
+      "Zircons": "Zircons",
+      "Stainless Steel": "Stainless Steel",
+    },
+    categoryTitles: {
+      rings: "Rings",
+      necklaces: "Necklaces",
+      earrings: "Earrings",
+      bracelets: "Bracelets & Watches",
+    },
+    categoryDescriptions: {
+      rings: "Discover our stunning collection of rings, from timeless engagement bands to elegant statement pieces.",
+      necklaces: "Explore our exquisite necklaces, featuring pendants, chains, and diamond-set designs for every occasion.",
+      earrings: "Browse our beautiful earrings collection, including studs, hoops, and drop designs crafted with precision.",
+      bracelets: "Find the perfect wrist adornment from our selection of bracelets, tennis chains, and elegant ladies' watches.",
     },
   },
 
   // Business Info
   business: {
     description:
-      "Your trusted destination for luxury timepieces and fine jewellery in Limassol, Cyprus.",
+      "Your trusted destination for exquisite jewellery in Kiti, Cyprus.",
   },
 
   // Contact Page
@@ -190,7 +259,7 @@ export const en = {
     infoTitle: "Contact Information",
     followUs: "Follow Us",
     socialDescription: "Stay updated with our latest collections and news.",
-    mapTitle: "Zacharias Location Map",
+    mapTitle: "Kastanos Location Map",
   },
 
   // About Page
@@ -198,20 +267,20 @@ export const en = {
     sectionLabel: "About Us",
     title: "Our Story",
     description:
-      "For nearly four decades, Zacharias has been Limassol's premier destination for exceptional timepieces and fine jewellery.",
-    storeImageAlt: "Zacharias Boutique in Limassol",
+      "For nearly four decades, Kastanos has been Kiti's premier destination for exceptional jewellery.",
+    storeImageAlt: "Kastanos Boutiques in Kiti",
     storyLabel: "Our Heritage",
-    storyTitle: "A Legacy of Excellence Since 1985",
+    storyTitle: "A Legacy of Excellence",
     storyParagraph1:
-      "Founded in the heart of Limassol, Cyprus, Zacharias began as a small family-owned boutique with a passion for fine craftsmanship and timeless elegance. What started as a dream has evolved into one of the island's most trusted names in luxury watches and jewellery.",
+      "Founded by Stavros G. Kastanos, Kastanos Jewellery began as a small family-owned boutique with a passion for fine craftsmanship and timeless elegance. For approximately 40 years, we have grown into one of Cyprus's most trusted names in fine jewellery.",
     storyParagraph2:
-      "Over the years, we have cultivated relationships with the world's most prestigious watch and jewellery houses, bringing our discerning clientele access to exceptional pieces that celebrate life's most precious moments.",
+      "What sets us apart is our own in-house workshop, where skilled artisans produce and finish jewellery with meticulous attention to detail. From custom design to repairs and restoration, every piece receives the care it deserves.",
     storyParagraph3:
-      "Today, we continue to uphold the traditions of excellence, personal service, and authentic quality that have defined our legacy for nearly four decades.",
+      "Today, under the legal entity Stavros G. Kastanos Ltd, we continue to uphold the traditions of excellence, personal service, and authentic quality that have defined our legacy for four decades.",
     missionLabel: "Our Mission",
     missionTitle: "Curating Timeless Elegance",
     missionDescription:
-      "We believe that every timepiece and piece of jewellery tells a story. Our mission is to help our clients discover pieces that resonate with their personal style and mark life's most meaningful moments. With expert guidance and unwavering commitment to authenticity, we ensure every acquisition is a treasure for generations to come.",
+      "We believe that every piece of jewellery tells a story. Our mission is to help our clients discover pieces that resonate with their personal style and mark life's most meaningful moments. With expert guidance and unwavering commitment to authenticity, we ensure every acquisition is a treasure for generations to come.",
     valuesLabel: "What We Stand For",
     valuesTitle: "Our Values",
     values: {
@@ -223,7 +292,7 @@ export const en = {
         "As a family-owned business, we treat every client like a valued member of our extended family.",
       passion: "Passion",
       passionDesc:
-        "Our love for horology and fine jewellery drives us to seek out only the most exceptional pieces.",
+        "Our love for fine jewellery drives us to seek out only the most exceptional pieces.",
       quality: "Quality",
       qualityDesc:
         "We partner exclusively with prestigious maisons known for their uncompromising standards.",
@@ -237,7 +306,7 @@ export const en = {
     teamLabel: "Our Team",
     teamTitle: "Experts in Every Detail",
     teamDescription:
-      "Our knowledgeable team brings decades of combined experience in luxury timepieces and fine jewellery. We're here to guide you through every step of your journey.",
+      "Our knowledgeable team brings decades of combined experience in fine jewellery. We're here to guide you through every step of your journey.",
     teamTagline: "40 Years of Excellence",
   },
 
